@@ -3,7 +3,7 @@ Find the output of the code snippets below:
 ```js
 console.log(numA + numB); //OUTPUT
 var numA = 21,
-  numB = 30;
+  numB = 30; // undefined + undefined = NaN
 ```
 
 Find the output of the code snippets below:
@@ -11,7 +11,7 @@ Find the output of the code snippets below:
 ```js
 console.log(numA + numB); //OUTPUT
 let numA = 21,
-  numB = 30;
+  numB = 30; //numA is not defined
 ```
 
 Find the output of the code snippets below:
@@ -19,7 +19,7 @@ Find the output of the code snippets below:
 ```js
 let numA = 21,
   numB = 30;
-console.log(numA + numB); //OUTPUT
+console.log(numA + numB); //51
 ```
 
 Find the output of the code snippets below:
@@ -31,7 +31,7 @@ function sayHello() {
 }
 function sayHello() {
   console.log("Hello");
-}
+} //Hello
 ```
 
 Find the output of the code snippets below:
@@ -41,7 +41,7 @@ let username = "Tyrion";
 sayHello(); // OUTPUT
 function sayHello() {
   console.log(username);
-}
+}//Tyrion
 ```
 
 Find the output of the code snippets below:
@@ -50,7 +50,7 @@ Find the output of the code snippets below:
 sayHello(); // OUTPUT
 let username = "Tyrion";
 function sayHello() {
-  console.log(username);
+  console.log(username);// ReferenceError: username is not defined
 }
 ```
 
@@ -61,7 +61,7 @@ let username = "Tyrion";
 sayHello(); // OUTPUT
 let sayHello = () => {
   console.log(username);
-};
+};//Uncaught ReferenceError: sayHello is not defined
 ```
 
 Find the output of the code snippets below:
@@ -71,7 +71,7 @@ sayHello(); // OUTPUT
 let username = "Tyrion";
 let sayHello = () => {
   console.log(username);
-};
+};//Uncaught ReferenceError: sayHello is not defined
 ```
 
 Find the output of the code snippets below:
@@ -81,7 +81,7 @@ sayHello(); // OUTPUT
 var username = "Tyrion";
 let sayHello = () => {
   console.log(username);
-};
+};//Uncaught ReferenceError: sayHello is not defined
 ```
 
 Find the output of the code snippets below:
@@ -91,7 +91,7 @@ var username = "Tyrion";
 sayHello(); // OUTPUT
 let sayHello = () => {
   console.log(username);
-};
+};//VM1859:2 Uncaught ReferenceError: sayHello is not defined
 ```
 
 Find the output of the code snippets below:
@@ -102,7 +102,7 @@ let sayHello = () => {
   console.log(username);
   var username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); // undefined
 ```
 
 Find the output of the code snippets below:
@@ -113,7 +113,7 @@ let sayHello = () => {
   var username = "John";
   console.log(username);
 };
-sayHello(); // OUTPUT
+sayHello(); // John
 ```
 
 Find the output of the code snippets below:
@@ -124,5 +124,5 @@ let sayHello = () => {
   console.log(username);
   let username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); // ReferenceError: Cannot access 'username' before initialization
 ```
