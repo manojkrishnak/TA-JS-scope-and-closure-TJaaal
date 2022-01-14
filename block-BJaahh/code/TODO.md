@@ -6,7 +6,7 @@
 // Your code goes here
 
 const double = multiplyBy(2);
-const final = double(15); // final should be 30
+const final = double(15); // final should be 30   
 ```
 
 2. Write a function called `fullName` that takes a string `firstName` as an argument and returns a function. Returned function takes another string `lastName` as an argument and returns full name.
