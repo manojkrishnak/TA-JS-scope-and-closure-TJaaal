@@ -10,7 +10,7 @@ function sayHello() {
   alert('Call me once!');
 }
 let log = once(sayHello);
-log(); // alert message "You can only call me once!"
+log(); // alert message "You can only call me once!  "
 log(); // return undefinde (can't be called twice)
 ```
 
