@@ -14,7 +14,7 @@ console.log(
       return str.toUpperCase();
     }
   )
-); // should log: { hi: 'HI', bye: 'BYE', later: 'LATER' }
+); // should log: { hi: 'HI', bye: 'BYE', later: 'LATER' }   
 ```
 
 2. Construct a function `multiMap` that will accept two arrays: an array of values and an array of callbacks. `multiMap` will return an object whose keys match the elements in the array of values. The corresponding values that are assigned to the keys will be arrays consisting of outputs from the array of callbacks, where the input to each callback is the key.
