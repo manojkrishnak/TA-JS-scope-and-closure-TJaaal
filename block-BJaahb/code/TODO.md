@@ -31,7 +31,7 @@ let counter = getCounter();
 counter(); // output
 counter(); // output
 counter(); // output
-counter(); // output
+counter(); // output   
 ```
 
 3. Create the execution context diagram
