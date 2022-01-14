@@ -6,7 +6,9 @@
 
 ```js
 function forEach(arrItems, cb) {
-    arrItems.reduce(cb, "");
+    arrItems.reduce((acc, cv, i, arrItems) => {
+        cb(cv, i, arrItems);
+    }, "");
 }
 
 forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
@@ -22,7 +24,10 @@ forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
 
 ```js
 function map(arr, cb) {
-  console.log(arr.map(cb));
+  return arr.reduce((acc, cv, i , arr) => {
+    acc.push(cb(cv, i, arr))
+    return acc;
+  }, [])
 }
 
 map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'AryaArya']
@@ -36,9 +41,15 @@ map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'Ary
 
 ```js
 function filter(arr, cb) {
-  // Your code goes here
-  console.log(arr.reduce(cb));
+  return arr.reduce((acc, cv, i, arr) => {
+    if(cb(cv, i , arr)){
+      acc.push(cv)
+    }
+    return acc;
+  }, [])
 }
+
+
 filter(['Sam', 'Jon', 'Arya'], (name) =>
   name.startsWith('S')
 ); // ['Sam']
