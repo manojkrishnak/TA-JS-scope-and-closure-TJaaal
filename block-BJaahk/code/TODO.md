@@ -10,7 +10,7 @@ function censor(fromWord, toWord) {
 }
 
 let censorSentence = censor('World', 'Sam');
-censorSentence('Hello World'); // Hello Sam
+censorSentence('Hello World'); // Hello Sam  
 
 let censorQuote = censor('die', 'live');
 censorQuote(`all men must die`); // all men must live
