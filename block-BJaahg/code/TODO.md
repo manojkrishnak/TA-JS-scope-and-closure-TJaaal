@@ -124,7 +124,7 @@ function isAwesome() {
 isAwesome();
 ```
 
-11. What will be the output of the following
+11. What will be the output of the following   
 
 ```js
 let firstName = 'Arya';
